@@ -26,7 +26,7 @@ function votar() {
         document.getElementById('paginaVotacao').style.display = 'none';
         document.getElementById('telaConfirmacao').style.display = 'block';
 
-       var audio = new Audio('/test-votacao/assets/aud/audio.mp3');  // Caminho relativo ao GitHub Pages
+       var audio = new Audio('/test-votacao/assets/aud/som.mp3');  // Caminho relativo ao GitHub Pages
         audio.play();
         // Limpar seleção e matrícula
         document.querySelector('input[name="candidato"]:checked').checked = false;
