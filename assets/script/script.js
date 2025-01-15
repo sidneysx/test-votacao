@@ -26,10 +26,8 @@ function votar() {
         document.getElementById('paginaVotacao').style.display = 'none';
         document.getElementById('telaConfirmacao').style.display = 'block';
 
-       // Criar um objeto de áudio e tocar
-        var audio = new Audio('../aud/audio.mp3');  // Caminho relativo correto
+       var audio = new Audio('/test-votacao/assets/aud/audio.mp3');  // Caminho relativo ao GitHub Pages
         audio.play();
-
         // Limpar seleção e matrícula
         document.querySelector('input[name="candidato"]:checked').checked = false;
         document.getElementById('matricula').value = ''; // Limpar o campo de matrícula
