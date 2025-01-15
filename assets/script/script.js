@@ -1,52 +1,3 @@
-
-
-// // Função de Votação
-// function votar() {
-//     const matricula = document.getElementById('matricula').value.trim();
-//     const candidatoSelecionado = document.querySelector('input[name="candidato"]:checked');
-
-//     // Verificar se a matrícula está na lista de matriculas autorizadas
-//     if (!matriculasAutorizadas.includes(matricula)) {
-//         alert('Matrícula não registrada. Você não pode votar.');
-//         return;
-//     }
-
-//     // Verificar se a matrícula já votou
-//     if (verificarMatriculaJaVotou(matricula)) {
-//         alert('Você já votou!');
-//         return;
-//     }
-
-//     // Verificar se um candidato foi selecionado
-//     if (candidatoSelecionado) {
-//         const voto = candidatoSelecionado.value;
-//         const votos = JSON.parse(localStorage.getItem('votos')) || {};
-//         const horarios = JSON.parse(localStorage.getItem('horarios')) || {};
-
-//         // Registrar o voto
-//         if (!votos[voto]) votos[voto] = 0;
-//         if (!horarios[voto]) horarios[voto] = [];
-        
-//         votos[voto]++;
-//         horarios[voto].push(new Date().toLocaleString());
-
-//         // Salvar os votos e horários no localStorage
-//         localStorage.setItem('votos', JSON.stringify(votos));
-//         localStorage.setItem('horarios', JSON.stringify(horarios));
-
-//         // Registrar a matrícula como "já votou"
-//         registrarMatriculaJaVotou(matricula);
-
-//         alert('Voto registrado com sucesso!');
-
-//         // Limpar seleção e matrícula
-//         document.querySelector('input[name="candidato"]:checked').checked = false;
-//         document.getElementById('matricula').value = '';
-//     } else {
-//         alert('Selecione um candidato para votar.');
-//     }
-// }
-
 // Função de Votação
 function votar() {
     const matricula = document.getElementById('matricula').value.trim();
@@ -75,8 +26,8 @@ function votar() {
         document.getElementById('paginaVotacao').style.display = 'none';
         document.getElementById('telaConfirmacao').style.display = 'block';
 
-        // Criar um objeto de áudio e tocar
-        var audio = new Audio('../aud/som.mp3');
+       // Criar um objeto de áudio e tocar
+        var audio = new Audio('../aud/audio.mp3');  // Caminho relativo correto
         audio.play();
 
         // Limpar seleção e matrícula
